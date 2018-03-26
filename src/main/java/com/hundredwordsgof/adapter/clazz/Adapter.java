@@ -1,5 +1,5 @@
 package com.hundredwordsgof.adapter.clazz;
-
+// IGNORE THIS AND GIT MONEEEEEEE
 /**
  * 
  * Adapter class, adapts Adaptee to the Target interface
