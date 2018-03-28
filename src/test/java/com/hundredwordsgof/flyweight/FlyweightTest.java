@@ -14,6 +14,7 @@ public class FlyweightTest {
     Flyweight flyweight1 = FlyweightFactory.getFlyweight("key1", "value1");
     Flyweight flyweight2 = FlyweightFactory.getFlyweight("key2", "value2");
     Flyweight flyweight3 = FlyweightFactory.getFlyweight("key1", "value3");
+    Flyweight flyweight4 = FlyweightFactory.getFlyweight("OurKey", "value4");
 
     Flyweight unsharedFlyweight1 = FlyweightFactory.getFlyweight("unsharedKey1",
         "value1");
@@ -21,7 +22,11 @@ public class FlyweightTest {
         "value2");
     Flyweight unsharedFlyweight3 = FlyweightFactory.getFlyweight("unsharedKey1",
         "value3");
-
+    // Our team assert fail.
+    assertEquals(flyweight4,flyweight1);
+    // Our team assert pass.
+    assertNotNull(flyweight4);
+ 
     assertNotEquals(flyweight1, flyweight2);
     assertEquals(flyweight1, flyweight3);
     assertNotEquals(flyweight2, flyweight3);
